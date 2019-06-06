@@ -1,18 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+   
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-img src="/assets/g.png" High="60px" Width="80px" ></ion-img> 
+  <ion-img  src="/assets/h.png" High="30px" Width="40px" ></ion-img> 
   <form ngSubmit=login(Forma) #Forma="ngForm">
+    <div class="centrar" >
     <ion-item>
     <ion-input  placeholder="usuario" ngModel #email="ngModel" name="email" type="email" required minlength="3" maxlength="50"></ion-input>
     </ion-item>
     <ion-item>
     <ion-input  placeholder="contraseña" ngModel #password="ngModel" name="password"  type="password" required minlength="3"maxlength="50"></ion-input>
-    </ion-item>
-    <ion-button href="home/tabs/tab1" type="submit" [disabled]=!Forma.valid >ingresar</ion-button> 
+   </ion-item> </div>
+    <div class="centrado"><ion-button class="Ingresar" color="success"  href="home/tabs/tab1" type="submit" [disabled]=!Forma.valid >ingresar</ion-button> </div>
+    <div font-family="Sans" class="centrado">¿aun no tienes usuraio?</div>
+    <div class="centrado"><ion-button class="Registrate" color="primary"  href="home/tabs/tab1" type="submit" >Registrate</ion-button> </div>
   </form>
 </ion-content>
