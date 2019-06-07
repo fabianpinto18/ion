@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  user={
+    usuario:"pinto",
+    password:"1234",
+  }
+
+  constructor(loadingCtrl:LoadingController) { }
   
   ngOnInit() {
   }
-  login() {   
 
+
+  login(Forma:NgForm ) {   
+
+  
+  if (Forma.valid) 
+  {
+    const loading = await this.loadingCtrl.create({
+      message: 'Validando...',
+      spinner: 'bubbles'
+    });
+    loading.present();
+    this.userForm.Correo = forma.value.email;
+    this.userForm.Clave = forma.value.clave;
+  }
   }
 }
 

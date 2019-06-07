@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>recorder</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-img src="/assets/f.png"></ion-img>
+   <form ngsubmit=login(Forma) #Forma="ngForm">
+    <div class="centrar"> 
+    <ion-item>
+       <ion-input placeholder="Nombre de usuario" ngModel #Nombre="ngModel" name="Nombre" type="Text"></ion-input>
+     </ion-item>
+     <ion-item>
+       <ion-input placeholder="Correo electronico" ngModel #Email="ngModel" name="Email" type="Text" ></ion-input>
+     </ion-item>
+     <ion-item>
+      <ion-input placeholder="Contraseña" ngModel #Password="ngModel" name="Password" type="Password"   ></ion-input>
+     </ion-item>
+     <ion-item>
+       <ion-input placeholder="Repita su contraseña" ngModel #Validarpassword="ngModel" name="Validarpassword" validateEqual="Password" type="Password" reverse="true" ></ion-input>
+      </ion-item></div>
+      <div class="centrado"><ion-button href="http://localhost:8100/" class="registro" color="success" type="submit">Registrar</ion-button></div>
+     
+
+
+
+
+   </form>
+</ion-content>
