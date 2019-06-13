@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { LoadingController } from '@ionic/angular';
-import { NavController} from '@ionic/angular';
+import { LoadingController,} from '@ionic/angular';
+import { NavController,} from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -14,11 +14,16 @@ export class LoginPage implements OnInit {
     usuario:"pinto",
     password:"1234",
   }
-  constructor(public navCtrl: NavController){}
+ 
 
-
-  constructor(public loadingCtrl:LoadingController) { }
+  constructor(public loadingCtrl:LoadingController) {}
+  constructor(private NavCtrl: NavController)  {}
   
+   
+  goToDetaiPage(id:string){
+    this.NavCtrl.navigateforward('http://localhost:8100/home/tabs/tab1');
+  }
+ 
   ngOnInit() {
   }
   
@@ -32,8 +37,9 @@ export class LoginPage implements OnInit {
         spinner: 'bubbles'
       });
       loading.present();
+      
   if (this.userForm.usuario === Forma.value.user && this.userForm.password === Forma.value.clave){ 
-    this.navControler.orga(['/home/tabs/tab1']);
+    
     console.log('verdadero');
     
   }else{
@@ -41,7 +47,7 @@ export class LoginPage implements OnInit {
   }
   this.loadingCtrl.dismiss()  }
   }
-  
+ 
 }
 
 

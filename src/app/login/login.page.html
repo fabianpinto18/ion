@@ -14,7 +14,7 @@
     <ion-item>
     <ion-input  placeholder="contraseña" ngModel #clave="ngModel" name="clave"  type="password" required minlength="3"maxlength="50"></ion-input>
    </ion-item> </div>
-    <div class="boton" class="centrado"><ion-button   class="Ingresar" color="success" type="submit" [disabled]=!Forma.valid >ingresar</ion-button><br><br>
+    <div class="boton" class="centrado"><ion-button  (click)="goToDetailpage('352')" class="Ingresar" color="success" type="submit" [disabled]=!Forma.valid >ingresar</ion-button><br><br>
     ¿aun no tienes usuario?<br>
     <ion-button  class="Registrate" color="primary"  href="recorder" type="submit" >Registrate</ion-button> </div>
   </form>
