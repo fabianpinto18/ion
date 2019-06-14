@@ -16,13 +16,13 @@ export class LoginPage implements OnInit {
   }
  
 
-  constructor(public loadingCtrl:LoadingController) {}
-  constructor(private NavCtrl: NavController)  {}
+  constructor(public loadingCtrl:LoadingController, public NavCtrl:NavController ) {}
+  
   
    
-  goToDetaiPage(id:string){
-    this.NavCtrl.navigateforward('http://localhost:8100/home/tabs/tab1');
-  }
+ 
+    
+  
  
   ngOnInit() {
   }
@@ -41,9 +41,11 @@ export class LoginPage implements OnInit {
   if (this.userForm.usuario === Forma.value.user && this.userForm.password === Forma.value.clave){ 
     
     console.log('verdadero');
-    
+    this.NavCtrl.navigateForward('/choose-park');
+
   }else{
       console.log('falso');
+
   }
   this.loadingCtrl.dismiss()  }
   }

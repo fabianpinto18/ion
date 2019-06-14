@@ -1,21 +1,32 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>LOGIN</ion-title>
-  </ion-toolbar>
+<ion-header >
+  
 </ion-header>
 
-<ion-content>
+<ion-content >
+  
   <ion-img  src="/assets/h.png" High="30px" Width="40px" ></ion-img> 
-  <form (ngSubmit)=login(Forma) #Forma="ngForm">
-    <div class="centrar" >
+  <form (ngSubmit)=login(Forma) #Forma="ngForm" >
+    <div class="centrar"   >
     <ion-item>
     <ion-input  placeholder="usuario" ngModel #name="ngModel" name="user" type="Text" required minlength="3" maxlength="50"></ion-input>
     </ion-item>
     <ion-item>
     <ion-input  placeholder="contraseña" ngModel #clave="ngModel" name="clave"  type="password" required minlength="3"maxlength="50"></ion-input>
    </ion-item> </div>
-    <div class="boton" class="centrado"><ion-button  (click)="goToDetailpage('352')" class="Ingresar" color="success" type="submit" [disabled]=!Forma.valid >ingresar</ion-button><br><br>
-    ¿aun no tienes usuario?<br>
-    <ion-button  class="Registrate" color="primary"  href="recorder" type="submit" >Registrate</ion-button> </div>
+    <div  class="centrado"><ion-button  style='width:200px; height:45px' color="success" class="Ingresar"  type="submit" [disabled]=!Forma.valid >ingresar</ion-button><br></div>
   </form>
+  <div class="centrado">
+    ¿aun no tienes usuario?<br> 
+  </div >
+  <div class="centrado">
+    <ion-button    style='width:200px; height:45px' href="recorder" type="submit" >Registrate</ion-button> 
+  </div>
+    <pre>
+
+
+
+    </pre>
+
+  
+
 </ion-content>
